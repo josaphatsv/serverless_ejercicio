@@ -1,0 +1,14 @@
+#"Service" is the name of this project. This will also be added to your AWS Resource names.
+service: test
+
+provider:
+  name: aws
+  architecture: x86_64
+
+functions:
+  hello:
+    handler: handler.hello
+    events:
+      - httpApi:
+          path: /
+          method: get
