@@ -73,7 +73,9 @@ agregaremos con node el modulo de uuidv4
 
 luego agregamos la funcion en el archivo handler newOrder
 
+como final para probar hacemos un ```serverless deploy``` y probamos con el link que nos brinda aws
 
+Ocuparemos ```serverless remove``` para eliminar todo lo creado con serverless deploy 
 
 
 
