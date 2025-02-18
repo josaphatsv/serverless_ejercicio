@@ -41,8 +41,39 @@ cuarto agregamos en el archivo serverless la primera funcion con Hello
 quinto en el archivo handler la funcion hello 
 
 sexto en la terminal agregamos el comando
->serverless deploy
->Nota: A sumire que tiene una cuenta AWS y la configuracion de la cuenta esta realizado 
+```serverless deploy```
+
+>Nota: Asumiré que tiene una cuenta AWS y la configuracion de la cuenta esta realizado 
+
+
+## 4 Creacion de la primera funcion Pizza
+
+primero creamos un proyecto con nodejs
+
+segundo creamos un archivo  llamado serverless.yml
+
+tercero creamo un archivos llamado handler.js 
+
+cuarto agregamos en el archivo  serverless lo siguiente 
+
+```
+functions:
+  newOrder:
+    handler: handler.newOrder
+    events:
+      - httpApi:
+          path: /order
+          method: post
+```
+el metodo que llamaremos la funcion sera post el cual espera la informacion json
+
+agregaremos con node el modulo de uuidv4
+
+>https://www.npmjs.com/package/uuid
+
+luego agregamos la funcion en el archivo handler newOrder
+
+
 
 
 

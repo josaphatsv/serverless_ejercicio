@@ -1,0 +1,14 @@
+#Primer Servicio Serverless Pizza
+service: pizzaApp
+
+provider:
+  name: aws
+  runtime: nodejs22.x
+
+functions:
+  newOrder:
+    handler: handler.newOrder
+    events:
+      - httpApi:
+          path: /order
+          method: post
